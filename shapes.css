@@ -1,0 +1,508 @@
+/* 
+
+   Dynamic CSS shapes, change only container size
+
+   Gathered from different sources:
+   http://css3shapes.com/
+   http://css-tricks.com/examples/ShapesOfCSS/
+   http://www.russellheimlich.com/blog/pure-css-shapes-triangles-delicious-logo-and-hearts/
+
+
+   License: MIT
+   
+   HOWTO:
+   
+   Put the shape inside a container class,
+   then you'll have to set height and width only once.
+
+   Create more container classes if needed.
+
+   Note: The size of some of the shapes is derived from the font-size (em)
+
+ */
+
+/* 
+   Size containers: 
+*/
+
+
+.container-small { 
+                   clear:both;
+                   height: 100px; 
+                   width: 100px; 
+                   font-family: "Times Roman", "times", times, serif; 
+                   font-size: 5px;
+                   }
+
+.container-medium { 
+                   clear:both;
+                    height: 320px; 
+                    width: 320px; 
+                   font-family: "Times Roman", "times", times, serif; 
+                    font-size: 10px;}
+
+.container-large { 
+                   clear:both;
+                   height: 800px; 
+                   width: 800px; 
+                   font-family: "Times Roman", "times", times, serif; 
+                   font-size: 30px;}
+
+.normalize-text { 
+                  clear: both;
+                  font-size: 16px; /* Set to your font */
+                  -moz-transform:rotate(0deg);
+                  -webkit-transform:rotate(0deg);
+                  o-transform:rotate(0deg);
+                  ms-transform:rotate(0deg);
+                  transform:rotate(0deg);
+                  webkit-transform: skew(0deg); 
+                  moz-transform: skew(0deg); 
+                  o-transform: skew(0deg);
+                  transform: skew(0deg);
+ }
+
+/*
+   Available shapes:
+   .square .rectangle .diamond .trapezium .parallelogram
+   .circle
+
+   .oval-horizontal     .oval-vertical
+   .egg
+
+   .triangle-up         .triangle-down
+   .triangle-left       .triangle-right
+   .triangle-topleft    .triangle-topright
+   .triangle-bottomleft .triangle-bottomright
+   .triangle-equal
+
+   .star-five   .star-six   .star-twelve
+
+   .pentagon    .octagon    .hexagon 
+   
+   .pacman      .biohazard  .speech-bubble
+
+   .funkyShape  .heart
+
+*/
+
+
+.square { 
+          width: 100%; 
+          height: 100%; 
+          background: red; 
+          }
+
+
+.circle{ 
+         width: 100%;
+         height: 100%;
+         background: red;
+         moz-border-radius: 50%;
+         webkit-border-radius: 50%;
+         border-radius: 50%; 
+}
+
+.oval-horizontal {
+        width: 100%; 
+        height: 50%; 
+        background: purple; 
+        moz-border-radius: 50% / 50%; 
+        webkit-border-radius: 50% / 50%; 
+        border-radius: 50% / 50%;
+}
+
+.oval-vertical {
+        width: 50%; 
+        height: 100%; 
+        background: purple; 
+        moz-border-radius: 50% / 50%; 
+        webkit-border-radius: 50% / 50%; 
+        border-radius: 50% / 50%;
+}
+
+.triangle-up {
+        width: 0; 
+        height: 0;
+        border-bottom: 30em solid green; 
+        border-left: 15em solid transparent; 
+        border-right: 15em solid transparent; 
+}
+
+
+.triangle-down { 
+                 width: 0; 
+                 height: 0;
+                 border-top: 30em solid pink;
+                 border-left: 15em solid transparent; 
+                 border-right: 15em solid transparent; 
+} 
+
+.triangle-left {
+                 width: 0;
+                 height: 0;
+                 border-right: 30em solid orange;
+                 border-top: 15em solid transparent;
+                 border-bottom: 15em solid transparent;
+}
+
+.triangle-right {
+                  width: 0;
+                  height: 0;
+                  border-left: 30em solid red;
+                  border-top: 15em solid transparent;
+                  border-bottom: 15em solid transparent;
+}
+
+.triangle-topleft { 
+                    width: 0; 
+                    height: 0; 
+                    border-top: 30em solid red; 
+                    border-right: 30em solid transparent; }
+
+.triangle-topright { 
+                     width: 0; 
+                     height: 0; 
+                     border-top: 30em solid red; 
+                     border-left: 30em solid transparent; } 
+
+.triangle-bottomleft { 
+                       width: 0; 
+                       height: 0; 
+                       border-bottom: 30em solid red; 
+                       border-right: 30em solid transparent; }
+
+.triangle-bottomright { 
+                        width: 0; 
+                        height: 0; 
+                        border-bottom: 30em solid red; 
+                        border-left: 30em solid transparent; } 
+
+.trapezium {
+             height: 0;
+             width: 20em;
+             border-bottom: 25em solid blue;
+             border-left: 15em solid transparent;
+             border-right: 15em solid transparent;
+}
+
+.diamond { /* aka rectangle rotated 90 degrees */
+     width: 30em; 
+   height: 30em; 
+   background: purple;
+   margin: 1em 0 0 22em;
+   /* Rotate */
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   -o-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+   /* Rotate Origin */
+   -webkit-transform-origin: 0 100%;
+   -moz-transform-origin: 0 100%;
+   -ms-transform-origin: 0 100%;
+   -o-transform-origin: 0 100%;
+   transform-origin: 0 100%;
+}
+
+.rectangle {
+             width: 100%; 
+             height: 50%;
+             background: green;
+}
+
+.parallelogram {
+            width: 30em; 
+   height: 17.3em;
+   background: pink;
+   margin: 0 0 0 5em;
+   /* Skew */
+   -webkit-transform: skew(20deg); 
+   -moz-transform: skew(20deg); 
+   -o-transform: skew(20deg);
+   transform: skew(20deg);
+}
+
+
+
+
+
+
+.star-six {
+            position: absolute;
+            width: 0; 
+            height: 0; 
+            border-left: 18.75em solid transparent; 
+            border-right: 18.75em solid transparent; 
+            border-bottom: 30em solid red;
+}
+
+.star-six:after {
+                  content:"";
+                  position: absolute;
+                  top: -1em;
+                  left: -37em;
+                  width: 0; 
+                  height: 0; 
+                  border-left: 18.75em solid transparent; 
+                  border-right: 18.75em solid transparent; 
+                  border-top: 30em solid red;
+                  margin: 11.25em 0 0 18.75em;
+}
+
+.octagon {
+           width: 30em; 
+           height: 30em; 
+           background: blue;
+}
+
+.octagon:before {
+                  height: 0;
+                  width: 12em;
+                  content:"";
+                  position: absolute; 
+                  border-bottom: 9em solid blue;
+                  border-left: 9em solid white; 
+                  border-right: 9em solid white; 
+}
+
+.octagon:after {
+                 height: 0;
+                 width: 12em;
+                 content:"";
+                 position: absolute;
+                 border-top: 9em solid blue; 
+                 border-left: 9em solid white;  
+                 border-right: 9em solid white; 
+                 margin: 21em 0 0 0;
+}
+
+.speech-bubble {
+                 width: 30em; 
+                 height: 20em; 
+                 background: purple;
+                 position: absolute;
+                 moz-border-radius: 2.5em; 
+                 webkit-border-radius: 2.5em; 
+                 border-radius: 2.5em;
+                 margin-left: 6.5em;
+}
+
+.speech-bubble:before {
+                        content:"";
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-top: 3.25em solid transparent;
+                        border-right: 6.5em solid purple;
+                        border-bottom: 3.25em solid transparent;
+                        margin: 3.25em 0 0 -6.25em;
+}
+
+.egg { 
+       display:block;
+       width:70%; /* width has to be 70% of height */
+       /* could use width:70%; in a square container */
+       height:100%;
+       background-color:green;
+       
+       /* beware that Safari needs actual px for border radius (bug) 
+          webkit-border-radius:63px 63px 63px 63px/108px 108px 72px 72px;*/
+
+       /* fails in Safari, but overwrites in Chrome */
+       border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+}
+
+.triangle-equal {
+                  width: 0;
+                  height: 0;
+                  border-bottom: 26em solid navy;
+                  border-left: 15em solid transparent;
+                  border-right: 15em solid transparent;
+}
+
+.pacman {
+          width: 0px;
+          height: 0px;
+          border-right: 15em solid transparent;
+          border-top: 15em solid yellow;
+          border-left: 15em solid yellow;
+          border-bottom: 15em solid yellow;
+          border-top-left-radius: 15em;
+          border-top-right-radius: 15em;
+          border-bottom-left-radius: 15em;
+          border-bottom-right-radius: 15em;
+}
+
+.biohazard {
+             width: 0;
+             height: 0;
+             border-bottom: 15em solid black;
+             border-top: 15em solid black;
+             border-left: 15em solid yellow;
+             border-right: 15em solid yellow;
+             moz-border-radius: 15em; 
+             webkit-border-radius: 15em; 
+             border-radius: 15em;
+}
+
+.star-five { 
+             margin: 15em 0; 
+             position: relative; 
+             display: block; 
+             color: red; 
+             width: 0; 
+             height: 0; 
+             border-right: 30em solid transparent; 
+             border-bottom: 21em solid red; 
+             border-left: 30em solid transparent; -moz-transform: rotate(35deg); -webkit-transform: rotate(35deg); -ms-transform: rotate(35deg); -o-transform: rotate(35deg); } 
+
+.star-five:before { 
+                    border-bottom: 24em solid red; 
+                    border-left: 9em solid transparent; 
+                    border-right: 9em solid transparent; 
+                    position: absolute; 
+                    height: 0; 
+                    width: 0; 
+                    top: -13.5em; 
+                    left: -19.5em; 
+                    display: block; 
+                    content: ''; -webkit-transform: rotate(-35deg); -moz-transform: rotate(-35deg); -ms-transform: rotate(-35deg); -o-transform: rotate(-35deg); } 
+
+.star-five:after { 
+                   position: absolute; 
+                   display: block; 
+                   color: red; 
+                   top: 0.9em; 
+                   left: -31.5em; 
+                   width: 0px; 
+                   height: 0px; 
+                   border-right: 30em solid transparent; 
+                   border-bottom: 21em solid red; 
+                   border-left: 30em solid transparent; -webkit-transform: rotate(-70deg); -moz-transform: rotate(-70deg); -ms-transform: rotate(-70deg); -o-transform: rotate(-70deg); 
+                   content: ''; }
+
+
+
+.pentagon { 
+            position: relative; 
+            width: 16.2em; 
+            border-width: 15em 5.4em 0; 
+            border-style: solid; 
+            border-color: red transparent;
+
+            position: relative;} 
+
+.pentagon:before { 
+                   content: ""; 
+                   position: absolute; 
+                   height: 0; 
+                   width: 0; 
+                   top: -25.5em; 
+                   left: -5.4em; 
+                   border-width: 0 13.5em 10.5em; 
+                   border-style: solid; 
+                   border-color: transparent transparent red; }
+
+
+
+.hexagon { 
+           width: 30em; 
+           height: 16.5em; 
+           background: red; 
+           position: relative; 
+           }
+
+.hexagon:before { content: ""; 
+                  position: absolute; 
+                  top: -7.5em; 
+                  left: 0; 
+                  width: 0; 
+                  height: 0; 
+                  border-left: 15em solid transparent; 
+                  border-right: 15em solid transparent; 
+                  border-bottom: 7.5em solid red; } 
+
+.hexagon:after { 
+                 content: ""; 
+                 position: absolute; 
+                 bottom: -7.5em; 
+                 left: 0; 
+                 width: 0; 
+                 height: 0; 
+                 border-left: 15em solid transparent; 
+                 border-right: 15em solid transparent; 
+                 border-top: 7.5em solid red; }
+
+
+
+
+.heart {
+border-color:red;
+border-style:dotted;
+border-width:0 20em 20em 0;
+height:0;
+margin-left:3em;
+
+width:0;
+   /* Rotate */
+   -webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+   transform: rotate(45deg);
+   /* Rotate Origin */
+   -webkit-transform-origin: 0 100%;
+   -moz-transform-origin: 0 100%;
+   -ms-transform-origin: 0 100%;
+   -o-transform-origin: 0 100%;
+   transform-origin: 0 100%;
+
+}
+
+.funkyShape {
+border-color: yellow blue red green;
+border-style: dotted;
+border-width: 15em 15em 15em 15em;
+height: 0px;
+width: 0px;
+}
+
+
+.star-twelve {
+   height: 30em;
+   width: 30em;
+   background: orange;
+
+   margin: 5em;
+}
+
+
+.star-twelve:before {
+   height: 30em;
+   width: 30em;
+   background: orange;
+   content:"";
+   position: absolute;
+   /* Rotate */
+   -moz-transform: rotate(30deg);
+   -webkit-transform: rotate(30deg);
+   -ms-transform: rotate(30deg);
+   -o-transform: rotate(30deg);
+   transform: rotate(30deg);
+}
+
+
+.star-twelve:after {
+   height: 30em;
+   width: 30em;
+   background: orange;
+   content:"";
+   position: absolute;
+   /* Rotate */
+   -moz-transform: rotate(-30deg);
+   -webkit-transform: rotate(-30deg);
+   -ms-transform: rotate(-30deg);
+   -o-transform: rotate(-30deg);
+   transform: rotate(-30deg);
+}

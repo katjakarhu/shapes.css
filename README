@@ -7,3 +7,13 @@ shapes.css:
 	   http://www.russellheimlich.com/blog/pure-css-shapes-triangles-delicious-logo-and-hearts/
 	   
 License: Public Domain
+
+
+HOWTO:
+   
+     Put the shape inside a size container class,
+     then you'll have to set height and width only once.
+     
+     Create more/modify container classes as needed.
+
+     Note: The size of some of the shapes is derived from the font-size (em)

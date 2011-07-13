@@ -12,10 +12,10 @@
    
    HOWTO:
    
-   Put the shape inside a container class,
+   Put the shape inside a size container class,
    then you'll have to set height and width only once.
 
-   Create more container classes if needed.
+   Create more/modify container classes as needed.
 
    Note: The size of some of the shapes is derived from the font-size (em)
 
